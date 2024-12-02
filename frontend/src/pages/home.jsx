@@ -14,7 +14,7 @@ const Home = () => {
   // const navigate = useNavigate();
   return (
     <div>
-      <Header/>
+      <Header />
       {/* <MainCarousel/>
       <Courses/>
       <Updates/>
