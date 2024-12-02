@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import MBA from "./components/Courses/MBA";
 import LAW from "./components/Courses/LAW";
 import BBA from "./components/Courses/BBA";
+import CareerGuidance from "./components/Courses/CareerGuidance";
 import Navbar from "./components/Navbar";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/courses/MBA" element={<MBA />} />
         <Route path="/courses/LAW" element={<LAW />} />
         <Route path="/courses/BBA" element={<BBA />} />
+        <Route path="/career-guidance" element={<CareerGuidance />} />
       </Routes>
     </div>
   );

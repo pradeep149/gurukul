@@ -9,15 +9,17 @@ import Updates from "../components/HomePage/Updates";
 import Events from "../components/HomePage/Events";
 import Blog from "../components/HomePage/Blog";
 import Footer from "../components/Footer";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   // const navigate = useNavigate();
   return (
     <div>
       <Header />
-      {/* <MainCarousel/>
-      <Courses/>
-      <Updates/>
+      {/* <MainCarousel/> */}
+      <Testimonials />
+      <Courses />
+      {/* <Updates/>
       <Events/>
       <Blog/>
       <Footer/> */}
