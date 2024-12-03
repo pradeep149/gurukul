@@ -7,7 +7,7 @@ const CareerGuidance = () => {
   const toggleContactForm = () => setShowContactForm(!showContactForm);
 
   return (
-    <div className="bg-gradient-to-r from-blue-100 via-indigo-200 to-blue-100 min-h-screen py-10">
+    <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen py-10 mt-20">
       <div className="text-center py-8">
         <Title text1={"CAREER"} text2={"GUIDANCE"} />
         <p className="w-3/4 mx-auto text-xl text-gray-800">
@@ -18,19 +18,19 @@ const CareerGuidance = () => {
         </p>
       </div>
 
-      <section className="px-4 py-16 bg-white rounded-lg shadow-lg mx-auto max-w-7xl">
+      <section className="px-8 py-16 bg-white rounded-lg shadow-lg mx-6">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">
           Why Choose Gurukul for Career Guidance?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center text-center p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-white rounded-lg shadow-xl">
+          <div className="flex flex-col items-center text-center p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-white rounded-lg shadow-xl hover:scale-105">
             <h3 className="text-2xl font-semibold mb-4">Expert Counselors</h3>
             <p>
               Our team of experienced counselors offer insightful and practical
               advice to help you succeed.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-white rounded-lg shadow-xl">
+          <div className="flex flex-col items-center text-center p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-white rounded-lg shadow-xl hover:scale-105">
             <h3 className="text-2xl font-semibold mb-4">
               Personalized Approach
             </h3>
@@ -39,7 +39,7 @@ const CareerGuidance = () => {
               aspirations and goals.
             </p>
           </div>
-          <div className="flex flex-col items-center text-center p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-white rounded-lg shadow-xl">
+          <div className="flex flex-col items-center text-center p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-white rounded-lg shadow-xl hover:scale-105">
             <h3 className="text-2xl font-semibold mb-4">Proven Success</h3>
             <p>
               Our students’ success stories are a testament to the impact of our
@@ -114,7 +114,7 @@ const CareerGuidance = () => {
         <div className="text-center mb-6">
           <button
             onClick={toggleContactForm}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-800"
+            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-gradient-to-l transition duration-300 ease-in-out hover:text-xl"
           >
             Contact Us
           </button>
@@ -125,7 +125,7 @@ const CareerGuidance = () => {
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Contact Form
             </h3>
-            <form>
+            <form className="flex flex-col justify-center">
               <input
                 type="text"
                 placeholder="Your Name"
@@ -142,7 +142,7 @@ const CareerGuidance = () => {
               ></textarea>
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-800"
+                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-gradient-to-l transition duration-300 ease-in-out hover:text-xl"
               >
                 Send Message
               </button>
@@ -150,10 +150,6 @@ const CareerGuidance = () => {
           </div>
         )}
       </section>
-
-      <footer className="bg-gray-800 text-white py-4 text-center">
-        <p>&copy; 2024 Gurukul. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

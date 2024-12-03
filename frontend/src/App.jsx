@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <ToastContainer />
-
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses/MBA" element={<MBA />} />

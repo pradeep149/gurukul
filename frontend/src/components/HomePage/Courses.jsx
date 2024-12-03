@@ -31,7 +31,7 @@ const coursesList = [
 
 const Courses = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-100 via-indigo-200 to-blue-100 min-h-screen">
+    <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen">
       <div className="max-w-7xl mx-auto py-12 px-6 sm:px-12 text-center">
         <h1 className="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
           Explore Our Courses

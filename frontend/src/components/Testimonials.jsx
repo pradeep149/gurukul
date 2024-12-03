@@ -55,7 +55,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-blue-100 via-indigo-200 to-blue-100 py-10 ">
+    <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 py-10 mt-20">
       <div className="text-center py-8">
         <Title text1={"STUDENT"} text2={"TESTIMONIALS"} />
         <p className="w-3/4 mx-auto text-xl text-black font-semibold italic">

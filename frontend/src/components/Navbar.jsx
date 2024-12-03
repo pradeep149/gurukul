@@ -1,113 +1,235 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Menu, Transition } from "@headlessui/react";
+import { Fragment } from "react";
 import { assets } from "../../assets/assets";
+import {
+  FaBars,
+  FaTimes,
+  FaInstagram,
+  FaFacebook,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Navbar = () => {
-  const [visible, setVisible] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // const logout = () => {
-  //   navigate("/login");
-  // };
+  const whatsappGroupLink = "https://chat.whatsapp.com/FsSXwdKH6Z91Udv6MgN8FN";
 
   return (
-    <div className="flex items-center justify-between py-5 font-medium">
-      <Link to="/">
-        <img src={assets.logo} className="w-14 rounded" alt="" />
-      </Link>
-
-      <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
-        <NavLink
-          to="/"
-          className="flex flex-col items-center gap-1 hover:text-lg duration-300"
-        >
-          <p>HOME</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-        <NavLink
-          to="/about_us"
-          className="flex flex-col items-center gap-1 hover:text-lg duration-300"
-        >
-          <p>ABOUT US</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-        <NavLink
-          to="/whatsapp"
-          className="flex flex-col items-center gap-1 hover:text-lg duration-300"
-        >
-          <p>WHATSAPP</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-        <NavLink
-          to="/social"
-          className="flex flex-col items-center gap-1 hover:text-lg duration-300"
-        >
-          <p>SOCIAL</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-      </ul>
-
-      <div className="flex items-center gap-6">
-        <div className="group relative">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 shadow-lg font-medium">
+      <div className="flex justify-between items-center py-4 px-8">
+        {/* Logo */}
+        <Link to="/">
           <img
-            onClick={() => (token ? null : navigate("/login"))}
-            className="w-5 cursor-pointer"
-            src={assets.profile_icon}
-            alt="profile"
+            src={assets.logo}
+            className="w-16 h-16 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+            alt="Logo"
           />
-          {/* {token && (
-            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
-              <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
-                <p className="cursor-pointer hover:text-black">My Profile</p>
-                <p onClick={logout} className="cursor-pointer hover:text-black">
-                  Logout
-                </p>
-              </div>
-            </div>
-          )} */}
-        </div>
-      </div>
+        </Link>
 
-      <div
-        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
-          visible ? "w-full" : "w-0"
-        }`}
-      >
-        <div className="flex flex-col text-gray-600">
-          <div
-            onClick={() => setVisible(false)}
-            className="flex items-center gap-4 p-3 cursor-pointer"
-          >
-            <img
-              className="h-4 rotate-180"
-              src={assets.dropdown_icon}
-              alt="back"
-            />
-            <p>Back</p>
-          </div>
+        {/* Hamburger Menu for Mobile */}
+        <button
+          className="sm:hidden text-3xl focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden sm:flex gap-8 text-md font-semibold text-gray-700 items-center">
           <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
             to="/"
+            className={({ isActive }) =>
+              `flex flex-col items-center gap-1 ${
+                isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+              } hover:text-blue-600 transition-colors duration-300`
+            }
           >
             HOME
           </NavLink>
           <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
-            to="/collection"
+            to="/about_us"
+            className={({ isActive }) =>
+              `flex flex-col items-center gap-1 ${
+                isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+              } hover:text-blue-600 transition-colors duration-300`
+            }
           >
-            COLLECTION
+            ABOUT US
           </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
-            to="/contact"
+          <Menu as="div" className="relative">
+            <Menu.Button className="flex flex-col items-center gap-1 hover:text-blue-600 transition-colors duration-300">
+              SOCIAL
+            </Menu.Button>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-150"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items className="absolute z-10 mt-2 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 rounded-lg shadow-lg p-4 space-y-2 text-white text-md">
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 hover:scale-105 transition-transform ${
+                        active ? "text-blue-200" : ""
+                      }`}
+                    >
+                      <FaInstagram /> Instagram
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 hover:scale-105 transition-transform ${
+                        active ? "text-blue-200" : ""
+                      }`}
+                    >
+                      <FaFacebook /> Facebook
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 hover:scale-105 transition-transform ${
+                        active ? "text-blue-200" : ""
+                      }`}
+                    >
+                      <FaTwitter /> Twitter
+                    </a>
+                  )}
+                </Menu.Item>
+              </Menu.Items>
+            </Transition>
+          </Menu>
+          <a
+            href={whatsappGroupLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-green-600 transition-colors duration-300"
           >
-            WISHLIST
-          </NavLink>
+            <FaWhatsapp className="text-2xl text-green-600" />
+            WHATSAPP
+          </a>
+        </ul>
+
+        {/* Login Button */}
+        <div className="hidden sm:flex">
+          <button className="px-8 py-2 text-white bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300">
+            Login
+          </button>
         </div>
       </div>
-    </div>
+
+      {/* Mobile Navigation */}
+      {menuOpen && (
+        <ul className="flex flex-col gap-4 p-4 bg-gray-100 sm:hidden">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `block text-gray-700 ${
+                isActive ? "text-blue-600 font-bold" : ""
+              } hover:text-blue-600 transition-colors duration-300`
+            }
+          >
+            HOME
+          </NavLink>
+          <NavLink
+            to="/about_us"
+            className={({ isActive }) =>
+              `block text-gray-700 ${
+                isActive ? "text-blue-600 font-bold" : ""
+              } hover:text-blue-600 transition-colors duration-300`
+            }
+          >
+            ABOUT US
+          </NavLink>
+          <Menu as="div" className="relative">
+            <Menu.Button className="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+              SOCIAL
+            </Menu.Button>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-150"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items className="absolute left-0 z-10 mt-2 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 rounded-lg shadow-lg p-4 space-y-2 text-white text-md">
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 hover:scale-105 transition-transform ${
+                        active ? "text-blue-200" : ""
+                      }`}
+                    >
+                      <FaInstagram /> Instagram
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 hover:scale-105 transition-transform ${
+                        active ? "text-blue-200" : ""
+                      }`}
+                    >
+                      <FaFacebook /> Facebook
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 hover:scale-105 transition-transform ${
+                        active ? "text-blue-200" : ""
+                      }`}
+                    >
+                      <FaTwitter /> Twitter
+                    </a>
+                  )}
+                </Menu.Item>
+              </Menu.Items>
+            </Transition>
+          </Menu>
+          <a
+            href={whatsappGroupLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-gray-700 hover:text-green-600 transition-colors duration-300"
+          >
+            Join WhatsApp Group
+          </a>
+        </ul>
+      )}
+    </nav>
   );
 };
 
