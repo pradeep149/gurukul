@@ -8,6 +8,9 @@ import LAW from "./components/Courses/LAW";
 import BBA from "./components/Courses/BBA";
 import CareerGuidance from "./components/Courses/CareerGuidance";
 import Navbar from "./components/Navbar";
+import Store from "./components/Store";
+import DetailedCoursePage from "./components/ViewAll";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -20,7 +23,10 @@ const App = () => {
         <Route path="/courses/LAW" element={<LAW />} />
         <Route path="/courses/BBA" element={<BBA />} />
         <Route path="/career-guidance" element={<CareerGuidance />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/store/:courseName" element={<DetailedCoursePage />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

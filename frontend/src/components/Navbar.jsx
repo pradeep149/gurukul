@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
@@ -18,18 +18,26 @@ const Navbar = () => {
   const whatsappGroupLink = "https://chat.whatsapp.com/FsSXwdKH6Z91Udv6MgN8FN";
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 shadow-lg font-medium">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-300 via-gray-100 to-gray-200 shadow-lg font-medium">
       <div className="flex justify-between items-center py-4 px-8">
-        {/* Logo */}
-        <Link to="/">
-          <img
-            src={assets.logo}
-            className="w-16 h-16 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
-            alt="Logo"
-          />
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link to="/">
+            <img
+              src={assets.logo}
+              className="w-16 h-16 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+              alt="Logo"
+            />
+          </Link>
+          <div className="flex flex-col">
+            <span className="text-2xl font-serif font-bold text-blue-900">
+              The Gurukul
+            </span>
+            <span className="text-md font-serif text-yellow-600">
+              Our Passion Your Success
+            </span>
+          </div>
+        </div>
 
-        {/* Hamburger Menu for Mobile */}
         <button
           className="sm:hidden text-3xl focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -37,7 +45,6 @@ const Navbar = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Desktop Navigation */}
         <ul className="hidden sm:flex gap-8 text-md font-semibold text-gray-700 items-center">
           <NavLink
             to="/"
@@ -129,15 +136,13 @@ const Navbar = () => {
           </a>
         </ul>
 
-        {/* Login Button */}
         <div className="hidden sm:flex">
-          <button className="px-8 py-2 text-white bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300">
+          <button className="px-8 py-2 text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300">
             Login
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {menuOpen && (
         <ul className="flex flex-col gap-4 p-4 bg-gray-100 sm:hidden">
           <NavLink
