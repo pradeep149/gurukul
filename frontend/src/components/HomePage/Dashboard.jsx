@@ -31,9 +31,9 @@ const Dashboard = () => {
   }));
 
   return (
-    <div className="py-10 bg-gradient-to-b from-cyan-100 via-blue-100 to-indigo-100">
+    <div className="py-10 bg-gradient-to-b from-gray-100 via-blue-100 to-indigo-100">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 lg:px-12">
-        <div className="bg-gradient-to-br from-cyan-300 via-cyan-400 to-cyan-500 shadow-xl rounded-lg p-6">
+        <div className="bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300 shadow-xl rounded-lg p-6">
           <h3
             className="text-2xl font-bold font-serif text-gray-900 mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
@@ -45,7 +45,7 @@ const Dashboard = () => {
               {notifications.map((item) => (
                 <li
                   key={item.id}
-                  className="bg-cyan-100 p-4 rounded-lg shadow-md hover:bg-cyan-200 transition-all duration-300"
+                  className="bg-sky-100 p-4 rounded-lg shadow-md hover:bg-sky-200 transition-all duration-300"
                 >
                   <h4
                     className="font-bold text-lg text-gray-900"
@@ -66,7 +66,7 @@ const Dashboard = () => {
           </PerfectScrollbar>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 shadow-xl rounded-lg p-6">
+        <div className="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 shadow-xl rounded-lg p-6">
           <h3
             className="text-2xl font-bold font-sans text-gray-900 mb-4"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -99,7 +99,7 @@ const Dashboard = () => {
           </PerfectScrollbar>
         </div>
 
-        <div className="bg-gradient-to-br from-indigo-300 via-indigo-400 to-indigo-500 shadow-xl rounded-lg p-6">
+        <div className="bg-gradient-to-br from-indigo-100 via-indigo-200 to-indigo-300 shadow-xl rounded-lg p-6">
           <h3
             className="text-2xl font-bold font-mono text-gray-900 mb-4"
             style={{ fontFamily: "'Courier New', monospace" }}
