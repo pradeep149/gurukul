@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Dashboard = () => {
-  // Data for Notifications/News
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/blogs/get/`
+        );
+        setBlogs(response.data);
+      } catch (err) {
+        setError("Failed to fetch blogs. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
   const notifications = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     title: `Notification ${i + 1}`,
@@ -12,15 +33,6 @@ const Dashboard = () => {
     link: `/news/notification-${i + 1}`,
   }));
 
-  // Data for Blogs
-  const blogs = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    title: `Blog Title ${i + 1}`,
-    description: `This is a short summary for blog ${i + 1}.`,
-    link: `/blogs/blog-${i + 1}`,
-  }));
-
-  // Data for Events
   const events = Array.from({ length: 9 }, (_, i) => ({
     id: i + 1,
     title: `Event ${i + 1}`,
@@ -74,28 +86,38 @@ const Dashboard = () => {
             Blogs
           </h3>
           <PerfectScrollbar style={{ maxHeight: "400px" }}>
-            <ul className="space-y-4">
-              {blogs.map((blog) => (
-                <li
-                  key={blog.id}
-                  className="bg-blue-100 p-4 rounded-lg shadow-md hover:bg-blue-200 transition-all duration-300"
-                >
-                  <h4
-                    className="font-bold text-lg text-gray-900"
-                    style={{ fontFamily: "'Roboto', sans-serif" }}
+            {loading ? (
+              <p className="text-center text-gray-800">Loading blogs...</p>
+            ) : error ? (
+              <p className="text-center text-red-500">{error}</p>
+            ) : blogs.length > 0 ? (
+              <ul className="space-y-4">
+                {blogs.map((blog) => (
+                  <li
+                    key={blog._id}
+                    className="bg-blue-100 p-4 rounded-lg shadow-md hover:bg-blue-200 transition-all duration-300"
                   >
-                    {blog.title}
-                  </h4>
-                  <p className="text-gray-700 text-sm">{blog.description}</p>
-                  <Link
-                    to={blog.link}
-                    className="text-indigo-700 hover:underline text-sm font-medium"
-                  >
-                    Read More &rarr;
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    <h4
+                      className="font-bold text-lg text-gray-900"
+                      style={{ fontFamily: "'Roboto', sans-serif" }}
+                    >
+                      {blog.title}
+                    </h4>
+                    <p className="text-gray-700 text-sm line-clamp-2">
+                      {blog.description}
+                    </p>
+                    <Link
+                      to={`/blogs/${blog._id}`}
+                      className="text-indigo-700 hover:underline text-sm font-medium"
+                    >
+                      Read More &rarr;
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-center text-gray-800">No blogs available.</p>
+            )}
           </PerfectScrollbar>
         </div>
 

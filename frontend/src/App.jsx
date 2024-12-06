@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import Store from "./components/Store";
 import DetailedCoursePage from "./components/ViewAll";
 import Footer from "./components/Footer";
+import ViewBlog from "./pages/ViewBlog";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/career-guidance" element={<CareerGuidance />} />
         <Route path="/store" element={<Store />} />
         <Route path="/store/:courseName" element={<DetailedCoursePage />} />
+        <Route path="/blogs/:blogId" element={<ViewBlog />} />
       </Routes>
       <Footer />
     </div>
