@@ -18,9 +18,23 @@ const AddBlog = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-2xl font-semibold mb-4">Add New Blog</h2>
-      <BlogForm onSubmit={handleAddBlog} />
+    <div className="min-h-screen bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 flex items-center justify-center py-10 px-6">
+      <div className="bg-white shadow-xl rounded-lg w-full max-w-3xl p-8">
+        <h2
+          className="text-4xl font-bold text-gray-800 text-center mb-8"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          Add New Blog
+        </h2>
+        <p
+          className="text-lg text-gray-600 text-center mb-6"
+          style={{ fontFamily: "'Poppins', sans-serif" }}
+        >
+          Create and share your blog with our community. Fill in the details
+          below to get started.
+        </p>
+        <BlogForm onSubmit={handleAddBlog} />
+      </div>
     </div>
   );
 };

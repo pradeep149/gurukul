@@ -56,15 +56,13 @@ export const updateBlog = async (req, res) => {
 export const deleteBlog = async (req, res) => {
   try {
     const { id } = req.params;
-
     const blog = await Blog.findById(id);
     if (!blog) return res.status(404).json({ message: "Blog not found" });
 
     if (blog.image) {
       await fs.unlink(path.join(__dirname, "uploads", blog.image));
     }
-
-    await blog.remove();
+    await Blog.deleteOne({ _id: id });
     res.status(200).json({ message: "Blog deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });

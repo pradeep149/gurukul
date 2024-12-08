@@ -14,7 +14,7 @@ const CareerGuidance = () => {
   const toggleContactForm = () => setShowContactForm(!showContactForm);
 
   return (
-    <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen py-10 mt-20">
+    <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen py-10">
       <div className="text-center py-8">
         <Title text1={"CAREER"} text2={"GUIDANCE"} />
         <motion.p
