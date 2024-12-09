@@ -12,6 +12,9 @@ import Store from "./pages/Store";
 import DetailedCoursePage from "./components/ViewAll";
 import Footer from "./components/Footer";
 import ViewBlog from "./pages/ViewBlog";
+import GamePage from "./pages/Game";
+import SudokuGame from "./pages/SudokuGame";
+import WordMazeGame from "./pages/WordGame";
 
 const App = () => {
   return (
@@ -28,6 +31,9 @@ const App = () => {
           <Route path="/store" element={<Store />} />
           <Route path="/store/:courseName" element={<DetailedCoursePage />} />
           <Route path="/blogs/:blogId" element={<ViewBlog />} />
+          <Route path="/games" element={<GamePage />} />
+          <Route path="/games/sudoku" element={<SudokuGame />} />
+          <Route path="/games/word-maze" element={<WordMazeGame />} />
         </Routes>
       </div>
       <Footer />
