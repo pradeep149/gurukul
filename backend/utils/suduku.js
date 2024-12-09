@@ -26,8 +26,9 @@ class Sudoku {
         // Fill remaining blocks
         this.fillRemaining(0, this.SRN);
 
-        // Remove Randomly K digits to make game
-        this.removeKDigits();
+        
+
+        
     }
 
     // Fill the diagonal SRN number of SRN x SRN matrices
@@ -174,8 +175,6 @@ class Sudoku {
         return;
     }
 }
-
-
 
 
 //  This code is contributed by phasing17.
