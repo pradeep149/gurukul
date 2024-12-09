@@ -20,6 +20,8 @@ import bgtest from "./bgtest.png";
 import GoogleSvg from "./icons8-google.svg";
 import registerbg from "./registerbg.png";
 import scareCrow from "./scareCrow.png";
+import sudoku from "./sudoku.jpg";
+import wordgame from "./wordgame.png";
 
 export const assets = {
   bgtest,
@@ -44,4 +46,6 @@ export const assets = {
   razorpay_logo,
   stripe_logo,
   cross_icon,
+  sudoku,
+  wordgame,
 };
