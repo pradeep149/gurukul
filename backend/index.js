@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import blogRoutes from "./routes/blogRoutes.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { notFound } from "./middleware/notFound.js";
+import gamesRoutes from "./routes/gamesRoutes.js";
 
 dotenv.config();
 
@@ -37,6 +38,7 @@ app.get("/api/message", async (req, res) => {
 connectDB();
 
 app.use("/api/blogs", blogRoutes);
+app.use("/api/games", gamesRoutes);
 app.use("/uploads", express.static("uploads"));
 
 app.use(notFound);
