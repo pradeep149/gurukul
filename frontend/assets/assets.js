@@ -22,6 +22,10 @@ import registerbg from "./registerbg.png";
 import scareCrow from "./scareCrow.png";
 import sudoku from "./sudoku.jpg";
 import wordgame from "./wordgame.png";
+import bgtest1 from "./bgtest1.webp";
+import bgtest2 from "./bgtest2.webp";
+import bgtest3 from "./bgtest3.webp";
+import bgtest4 from "./bgtest4.webp";
 
 export const assets = {
   bgtest,
@@ -48,4 +52,8 @@ export const assets = {
   cross_icon,
   sudoku,
   wordgame,
+  bgtest1,
+  bgtest2,
+  bgtest3,
+  bgtest4,
 };

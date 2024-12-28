@@ -3,10 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Home from "./pages/home";
-import MBA from "./components/Courses/MBA";
-import LAW from "./components/Courses/LAW";
-import BBA from "./components/Courses/BBA";
-import CareerGuidance from "./components/Courses/CareerGuidance";
+import MBA from "./pages/Courses/MBA";
+import LAW from "./pages/Courses/LAW";
+import BBA from "./pages/Courses/BBA";
+import CareerGuidance from "./pages/Courses/CareerGuidance";
 import Navbar from "./components/Navbar";
 import Store from "./pages/Store";
 import DetailedCoursePage from "./components/ViewAll";
@@ -15,6 +15,12 @@ import ViewBlog from "./pages/ViewBlog";
 import GamePage from "./pages/Game";
 import SudokuGame from "./pages/SudokuGame";
 import WordMazeGame from "./pages/WordGame";
+import IPMATPage from "./pages/BBA/IPMAT";
+import IPMATROTHAKPage from "./pages/BBA/IPMATROTHAK.JSX";
+import JIPMATPage from "./pages/BBA/JIPMAT";
+import SETPage from "./pages/BBA/SET";
+import NPATPage from "./pages/BBA/NPAT";
+import CUETPage from "./pages/BBA/CUET";
 
 const App = () => {
   return (
@@ -34,6 +40,12 @@ const App = () => {
           <Route path="/games" element={<GamePage />} />
           <Route path="/games/sudoku" element={<SudokuGame />} />
           <Route path="/games/word-maze" element={<WordMazeGame />} />
+          <Route path="/exam/ipmat" element={<IPMATPage />} />
+          <Route path="/exam/ipmat-rohtak" element={<IPMATROTHAKPage />} />
+          <Route path="/exam/jipmat" element={<JIPMATPage />} />
+          <Route path="/exam/set" element={<SETPage />} />
+          <Route path="/exam/npat" element={<NPATPage />} />
+          <Route path="/exam/cuet" element={<CUETPage />} />
         </Routes>
       </div>
       <Footer />
