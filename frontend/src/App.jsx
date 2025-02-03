@@ -21,6 +21,10 @@ import JIPMATPage from "./pages/BBA/JIPMAT";
 import SETPage from "./pages/BBA/SET";
 import NPATPage from "./pages/BBA/NPAT";
 import CUETPage from "./pages/BBA/CUET";
+import CourseInfo from "./components/LAW/Helpers/CourseInfo";
+import ExamInfo from "./components/LAW/Helpers/ExamInfo";
+import CollegeInfo from "./components/LAW/Helpers/CollegeInfo";
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   return (
@@ -46,6 +50,13 @@ const App = () => {
           <Route path="/exam/set" element={<SETPage />} />
           <Route path="/exam/npat" element={<NPATPage />} />
           <Route path="/exam/cuet" element={<CUETPage />} />
+          <Route path="/courses/LAW/:courseId" element={<CourseInfo />} />
+          <Route path="/courses/LAW/exams/:examId" element={<ExamInfo />} />
+          <Route
+            path="/courses/LAW/colleges/:collegeId"
+            element={<CollegeInfo />}
+          />
+          <Route path="/about_us" element={<AboutUs />} />
         </Routes>
       </div>
       <Footer />
