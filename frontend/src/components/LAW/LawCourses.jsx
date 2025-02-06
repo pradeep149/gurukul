@@ -95,25 +95,38 @@ const LawCourses = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="py-12 px-6 max-w-4xl mx-auto">
-      <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
-        Law Courses
+    <div className="py-16 px-6 max-w-6xl mx-auto">
+      <h2 className="text-5xl font-extrabold text-gray-900 text-center mb-12 drop-shadow-lg">
+        📚 Law Courses
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         {lawCourses.map((course, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
           >
+            {/* Course Card */}
             <div
-              className="bg-white shadow-md rounded-lg p-6 text-center cursor-pointer hover:shadow-lg transition duration-300"
+              className="bg-gradient-to-br from-blue-300 to-indigo-400 shadow-xl rounded-lg p-6 text-center 
+                          flex flex-col justify-between h-60 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-400 hover:to-purple-500
+                          hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
               onClick={() => navigate(course.path, { state: { course } })}
             >
-              <h3 className="text-2xl font-semibold text-gray-800">
+              <h3 className="text-3xl font-semibold text-gray-900 mb-4">
                 {course.title}
               </h3>
+              <p className="text-gray-100 text-sm leading-relaxed mb-4">
+                {course.description.substring(0, 120)}...
+              </p>
+              <button
+                className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-semibold shadow-md
+                           hover:bg-gray-700 transition-colors duration-300"
+              >
+                Learn More
+              </button>
             </div>
           </motion.div>
         ))}

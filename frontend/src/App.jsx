@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import ViewBlog from "./pages/ViewBlog";
 import GamePage from "./pages/Game";
 import SudokuGame from "./pages/SudokuGame";
-import WordMazeGame from "./pages/WordGame";
+import WordMage from "./pages/WordGame";
 import IPMATPage from "./pages/BBA/IPMAT";
 import IPMATROTHAKPage from "./pages/BBA/IPMATROTHAK.JSX";
 import JIPMATPage from "./pages/BBA/JIPMAT";
@@ -25,6 +25,13 @@ import CourseInfo from "./components/LAW/Helpers/CourseInfo";
 import ExamInfo from "./components/LAW/Helpers/ExamInfo";
 import CollegeInfo from "./components/LAW/Helpers/CollegeInfo";
 import AboutUs from "./pages/AboutUs";
+import MBAWhatItsAllAbout from "./pages/MBA/MBAWhatItsAllAbout";
+import MBAPgdm from "./pages/MBA/MBAPgdm";
+import DifferencePgdmAndMBA from "./pages/MBA/DifferencePgdmAndMBA";
+import ReasonsToDoMBA from "./pages/MBA/ReasonsToDoMBA";
+import MBAEligibility from "./pages/MBA/MBAEligibility";
+import TopBSchools from "./pages/MBA/TopBSchools";
+import MBAEntranceExams from "./pages/MBA/MBAEntranceExams";
 
 const App = () => {
   return (
@@ -43,7 +50,7 @@ const App = () => {
           <Route path="/blogs/:blogId" element={<ViewBlog />} />
           <Route path="/games" element={<GamePage />} />
           <Route path="/games/sudoku" element={<SudokuGame />} />
-          <Route path="/games/word-maze" element={<WordMazeGame />} />
+          <Route path="/games/word-maze" element={<WordMage />} />
           <Route path="/exam/ipmat" element={<IPMATPage />} />
           <Route path="/exam/ipmat-rohtak" element={<IPMATROTHAKPage />} />
           <Route path="/exam/jipmat" element={<JIPMATPage />} />
@@ -57,6 +64,19 @@ const App = () => {
             element={<CollegeInfo />}
           />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route
+            path="/mba/what-its-all-about"
+            element={<MBAWhatItsAllAbout />}
+          />
+          <Route path="/mba/pgdm" element={<MBAPgdm />} />
+          <Route
+            path="/mba/difference-pgdm-mba"
+            element={<DifferencePgdmAndMBA />}
+          />
+          <Route path="/mba/reasons-to-do-mba" element={<ReasonsToDoMBA />} />
+          <Route path="/mba/eligibility" element={<MBAEligibility />} />
+          <Route path="/mba/top-b-schools" element={<TopBSchools />} />
+          <Route path="/mba/entrance-exams" element={<MBAEntranceExams />} />
         </Routes>
       </div>
       <Footer />

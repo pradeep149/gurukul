@@ -1,10 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  FaGraduationCap,
-  FaClock,
-  FaCalendarAlt,
-  FaChevronDown,
-} from "react-icons/fa";
+import React from "react";
+import { FaGraduationCap } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Introduction = () => {
@@ -13,26 +8,46 @@ const Introduction = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="bg-gradient-to-r from-blue-200 to-indigo-300 min-h-[50vh] flex items-center justify-center text-center px-6 py-12"
+      className="bg-gradient-to-br from-blue-200 via-cyan-200 to-indigo-400 min-h-[60vh] flex items-center justify-center text-center px-6 py-16 shadow-lg rounded-lg"
     >
       <div className="max-w-4xl">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-6xl font-extrabold text-gray-900 mb-6 drop-shadow-lg flex items-center justify-center"
+        >
+          <FaGraduationCap className="mr-3 text-yellow-500 animate-bounce" />
           What is LLB?
-        </h1>
-        <p className="text-lg text-gray-800 leading-relaxed">
-          LLB stands for <span className="font-semibold">Bachelor of Laws</span>
-          , a foundational degree in law. It is typically a{" "}
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="text-xl text-gray-900 leading-relaxed"
+        >
+          <span className="font-bold">LLB</span> stands for{" "}
+          <span className="font-semibold">Bachelor of Laws</span>, a
+          foundational degree in law. It is typically a{" "}
           <span className="font-semibold">3-year course</span> designed for
           graduates who have completed an undergraduate degree in any
           discipline. So, a minimum of{" "}
           <span className="font-semibold">6 years</span> (3 years of graduation
           + 3 years of LLB) is required.
-        </p>
-        <p className="text-lg text-gray-800 mt-4 leading-relaxed">
-          Instead, one can pursue a{" "}
-          <span className="font-semibold">BA LLB or BBA LLB</span>, a 5-year
-          integrated course after the 12th, saving one precious year.
-        </p>
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="text-xl text-gray-900 mt-6 leading-relaxed"
+        >
+          Alternatively, one can pursue a{" "}
+          <span className="font-semibold">BA LLB or BBA LLB</span>, a{" "}
+          <span className="font-semibold">5-year integrated course</span> after
+          the 12th, saving one valuable year.
+        </motion.p>
       </div>
     </motion.div>
   );
