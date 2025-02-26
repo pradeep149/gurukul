@@ -13,7 +13,13 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 const connectDB = async () => {
@@ -28,6 +34,9 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
+app.get("/", (req, res) => {
+  res.send("Backend Working");
+});
 app.get("/api/message", async (req, res) => {
   try {
     const message = "Hello from the backend!";
