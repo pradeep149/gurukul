@@ -41,7 +41,7 @@ const AnimatedButton = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-14 z-50">
+    <div className="fixed bottom-4 right-6 z-50">
       <motion.div
         id="animatedButton"
         className={`relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-teal-400 to-blue-500 text-white rounded-full shadow-lg`}

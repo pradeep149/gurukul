@@ -96,16 +96,8 @@ const Footer = () => {
                 </div>
               )}
             </div>
-
-            <Link
-              to="/careers"
-              className="font-semibold text-lg hover:text-indigo-400"
-            >
-              Careers
-            </Link>
           </div>
 
-          {/* Store Section */}
           <div className="flex flex-col">
             <h3 className="text-xl font-bold text-indigo-300 mb-4">Store</h3>
             <p className="text-gray-400 mb-4">

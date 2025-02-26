@@ -35,6 +35,7 @@ import WhereToDoMBA from "./pages/MBA/WhereToDoMBA";
 import HowToGetIntoMBA from "./pages/MBA/HowToGetIntoMBA";
 import RightTimeForMBA from "./pages/MBA/RightTimeForMBA";
 import WhatIsCAT from "./pages/MBA/WhatIsCAT";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
       <ToastContainer />
       <Navbar />
       <div className="mt-24">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses/MBA" element={<MBA />} />

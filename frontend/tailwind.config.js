@@ -4,6 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#084b61", // Blue
+        secondary: "#ffc721", // Yellow
         customPink: "#ff0077",
       },
       keyframes: {
