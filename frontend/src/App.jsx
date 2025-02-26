@@ -16,7 +16,7 @@ import GamePage from "./pages/Game";
 import SudokuGame from "./pages/SudokuGame";
 import WordMage from "./pages/WordGame";
 import IPMATPage from "./pages/BBA/IPMAT";
-import IPMATROTHAKPage from "./pages/BBA/IPMATROTHAK.JSX";
+import IPMATROTHAKPage from "./pages/BBA/IPMATROTHAK";
 import JIPMATPage from "./pages/BBA/JIPMAT";
 import SETPage from "./pages/BBA/SET";
 import NPATPage from "./pages/BBA/NPAT";
