@@ -15,9 +15,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://gurukul-nlrc.vercel.app"],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use(express.json());
