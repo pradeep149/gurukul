@@ -84,7 +84,7 @@ const Navbar = () => {
             Dashboard
           </NavLink>
           <NavLink
-            to="/add"
+            to="/marquee"
             onClick={() => setMenuOpen(false)}
             className={({ isActive }) =>
               `px-4 py-2 rounded-lg text-lg font-semibold ${
@@ -94,7 +94,7 @@ const Navbar = () => {
               }`
             }
           >
-            Add Blog
+            Add/Update Marquee
           </NavLink>
         </div>
       </div>

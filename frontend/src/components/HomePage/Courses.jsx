@@ -33,16 +33,18 @@ const coursesList = [
   {
     title: "SSC",
     description: "Crack SSC exams with the best coaching and strategies.",
-    url: "/ssc",
+    url: "#",
     icon: <FaFileAlt className="text-green-500 text-5xl" />,
     bgColor: "bg-green-50",
+    comingSoon: true,
   },
   {
     title: "Career Guidance",
     description: "Get expert career guidance to achieve your goals.",
-    url: "/career-guidance",
+    url: "#",
     icon: <FaCompass className="text-orange-500 text-5xl" />,
     bgColor: "bg-orange-50",
+    comingSoon: true,
   },
 ];
 
@@ -72,8 +74,15 @@ const Courses = () => {
                 </h3>
               </div>
               <p className="text-lg text-gray-600 mt-4">{course.description}</p>
-              <button className="mt-4 w-full py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-gradient-to-l transition duration-300 ease-in-out self-end">
-                Learn More
+              <button
+                className={`mt-4 w-full py-2 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out self-end ${
+                  course.comingSoon
+                    ? "bg-gray-400 cursor-not-allowed" // Gray button for "Coming Soon"
+                    : "bg-gradient-to-r from-blue-500 to-indigo-600 hover:bg-gradient-to-l"
+                }`}
+                disabled={course.comingSoon}
+              >
+                {course.comingSoon ? "Coming Soon" : "Learn More"}
               </button>
             </a>
           ))}

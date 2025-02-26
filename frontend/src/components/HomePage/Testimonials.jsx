@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Title from "../Title";
 import { FaLinkedin } from "react-icons/fa";
+import { assets } from "../../../assets/assets";
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -15,43 +16,35 @@ const Testimonials = () => {
       const data = [
         {
           id: 1,
-          name: "John Doe",
+          name: "Praharsha Sai",
           feedback:
-            "Gurukul is amazing! The courses are comprehensive, and the user experience is fantastic. Highly recommend it to everyone!",
-          image: "https://via.placeholder.com/150",
-          linkedin: "https://linkedin.com/in/johndoe",
+            "I had the privilege of learning from Chaitanya Sir during my CAT preparation, and his guidance played a crucial role in my journey. His structured approach to Quantitative Aptitude and Logical Reasoning made even difficult concepts easier to grasp. Beyond academics, his insights on personal interviews were extremely valuable. What truly sets him apart is his willingness to go the extra mile to support his students. Highly recommend Chaitanya Sir and his institute 'Gurukul' to anyone looking for well-rounded CAT preparation.",
+          image: assets.testimonial1,
+          linkedin: "https://www.linkedin.com/in/praharsha-c-421476129",
         },
         {
           id: 2,
-          name: "Jane Smith",
+          name: "Prudhvi Teja Tejavath",
           feedback:
-            "I loved the interface and the detailed study materials. It helped me clear my exams with ease. Thank you, Gurukul!",
-          image: "https://via.placeholder.com/150",
-          linkedin: "https://linkedin.com/in/janesmith",
+            "I can't thank Chaitanya sir enough for his incredible guidance and support during my CAT preparation. QA and LRDI always felt like a tough nut to crack, but his clear explanations, structured approach, and constant encouragement made all the difference. More than just a teacher, he was a mentor who instilled confidence in me and helped me develop the right problem-solving mindset. His classes played a huge role in my journey, and I owe a big part of my success in CAT 2019—and my admission to FMS Delhi—to his teaching. If you're looking for someone who truly cares about your success and makes learning engaging, Chaitanya sir is the coach you need!",
+          image: assets.testimonial2,
+          linkedin: "https://www.linkedin.com/in/tejavath-prudhvi-teja-fms/",
         },
-        {
-          id: 3,
-          name: "Samuel Green",
-          feedback:
-            "A great platform for students preparing for competitive exams. The courses are very well-structured and affordable.",
-          image: "https://via.placeholder.com/150",
-          linkedin: "https://linkedin.com/in/samuelgreen",
-        },
+        // {
+        //   id: 3,
+        //   name: "Mekala Satwika Reddy",
+        //   feedback:
+        //     "I am incredibly grateful to Chaitanya sir for his outstanding teaching in Analytical and Logical Reasoning. His clear and structured approach made even the most complex topics easy to understand. His engaging teaching style and problem-solving techniques enhanced my critical thinking skills, boosting my confidence in the subject. Sir’s constant encouragement and dedication to ensuring every student grasped the concepts truly set him apart. His mentorship not only strengthened my fundamentals but also helped me excel in the subject. Truly an inspiring and dedicated educator!",
+        //   image: "https://via.placeholder.com/150",
+        //   linkedin: "#",
+        // },
         {
           id: 4,
-          name: "Alice Brown",
+          name: "Sojjwala Peethala",
           feedback:
-            "The team at Gurukul is very supportive, and their resources helped me stay ahead in my preparation. Highly recommended!",
-          image: "https://via.placeholder.com/150",
-          linkedin: "https://linkedin.com/in/alicebrown",
-        },
-        {
-          id: 5,
-          name: "Michael Lee",
-          feedback:
-            "Exceptional experience! The platform is easy to use, and the quality of study material is unmatched.",
-          image: "https://via.placeholder.com/150",
-          linkedin: "https://linkedin.com/in/michaellee",
+            "I cannot thank Chaitanya Sir enough for his unwavering support and mentorship throughout my CAT journey. After a failed attempt, I lacked confidence, but his structured guidance, daily concept checks, and personalized feedback after every mock test transformed my approach. Beyond academics, his constant support in interview preparation—helping me navigate what to say (and what not to)—was invaluable. His dedication to each of us is unparalleled, making complex concepts, especially in Quant and LRDI, easy to grasp and boosting confidence at every step. Thank you Sir for being such a great mentor, for helping me convert IIM Bangalore, and for shaping me into who I am today. Highly recommended for anyone looking for the right mentor to achieve their dream B-school!",
+          image: assets.testimonial3,
+          linkedin: "https://www.linkedin.com/in/sojjwala-peethala-711088217/",
         },
       ];
       setTestimonials(data);
@@ -118,7 +111,6 @@ const Testimonials = () => {
         .swiper-pagination-bullet {
           background-color: white !important;
         }
-
         .swiper-pagination-bullet-active {
           background-color: #4a90e2 !important;
         }

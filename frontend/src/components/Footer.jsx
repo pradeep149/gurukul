@@ -113,10 +113,10 @@ const Footer = () => {
               resources to enhance your learning journey.
             </p>
             <Link
-              to="/store"
+              to="#"
               className="px-6 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 text-white rounded-lg hover:scale-105 transform transition-all text-center"
             >
-              Visit Store
+              Coming soon
             </Link>
           </div>
         </div>

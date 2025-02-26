@@ -26,6 +26,9 @@ import bgtest1 from "./bgtest1.webp";
 import bgtest2 from "./bgtest2.webp";
 import bgtest3 from "./bgtest3.webp";
 import bgtest4 from "./bgtest4.webp";
+import testimonial1 from "./testimonial1.jpg";
+import testimonial2 from "./testimonial2.jpg";
+import testimonial3 from "./testimonial3.jpg";
 
 export const assets = {
   bgtest,
@@ -56,4 +59,7 @@ export const assets = {
   bgtest2,
   bgtest3,
   bgtest4,
+  testimonial1,
+  testimonial2,
+  testimonial3,
 };

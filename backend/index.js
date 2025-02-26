@@ -3,8 +3,11 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import blogRoutes from "./routes/blogRoutes.js";
+import eventRoutes from "./routes/eventRoutes.js";
+import newsRoutes from "./routes/newsRoutes.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { notFound } from "./middleware/notFound.js";
+import marqueeRouter from "./routes/marquee.js";
 
 dotenv.config();
 
@@ -37,7 +40,10 @@ app.get("/api/message", async (req, res) => {
 connectDB();
 
 app.use("/api/blogs", blogRoutes);
+app.use("/api/events", eventRoutes);
+app.use("/api/news", newsRoutes);
 app.use("/uploads", express.static("uploads"));
+app.use("/api/marquee", marqueeRouter);
 
 app.use(notFound);
 app.use(errorHandler);

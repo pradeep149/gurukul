@@ -25,13 +25,16 @@ import CourseInfo from "./components/LAW/Helpers/CourseInfo";
 import ExamInfo from "./components/LAW/Helpers/ExamInfo";
 import CollegeInfo from "./components/LAW/Helpers/CollegeInfo";
 import AboutUs from "./pages/AboutUs";
-import MBAWhatItsAllAbout from "./pages/MBA/MBAWhatItsAllAbout";
-import MBAPgdm from "./pages/MBA/MBAPgdm";
-import DifferencePgdmAndMBA from "./pages/MBA/DifferencePgdmAndMBA";
-import ReasonsToDoMBA from "./pages/MBA/ReasonsToDoMBA";
-import MBAEligibility from "./pages/MBA/MBAEligibility";
-import TopBSchools from "./pages/MBA/TopBSchools";
-import MBAEntranceExams from "./pages/MBA/MBAEntranceExams";
+import WhatIsMBA from "./pages/MBA/WhatIsMBA";
+import MBAHistory from "./pages/MBA/MBAHistory";
+import WhoCanPursueMBA from "./pages/MBA/WhoCanPursueMBA";
+import MBATypes from "./pages/MBA/MBATypes";
+import WhyGetMBA from "./pages/MBA/WhyGetMBA";
+import WhoShouldConsiderMBA from "./pages/MBA/WhoShouldConsiderMBA";
+import WhereToDoMBA from "./pages/MBA/WhereToDoMBA";
+import HowToGetIntoMBA from "./pages/MBA/HowToGetIntoMBA";
+import RightTimeForMBA from "./pages/MBA/RightTimeForMBA";
+import WhatIsCAT from "./pages/MBA/WhatIsCAT";
 
 const App = () => {
   return (
@@ -64,19 +67,16 @@ const App = () => {
             element={<CollegeInfo />}
           />
           <Route path="/about_us" element={<AboutUs />} />
-          <Route
-            path="/mba/what-its-all-about"
-            element={<MBAWhatItsAllAbout />}
-          />
-          <Route path="/mba/pgdm" element={<MBAPgdm />} />
-          <Route
-            path="/mba/difference-pgdm-mba"
-            element={<DifferencePgdmAndMBA />}
-          />
-          <Route path="/mba/reasons-to-do-mba" element={<ReasonsToDoMBA />} />
-          <Route path="/mba/eligibility" element={<MBAEligibility />} />
-          <Route path="/mba/top-b-schools" element={<TopBSchools />} />
-          <Route path="/mba/entrance-exams" element={<MBAEntranceExams />} />
+          <Route path="/mba/what-is-mba" element={<WhatIsMBA />} />
+          <Route path="/mba/mba-history" element={<MBAHistory />} />
+          <Route path="/mba/who-can-pursue" element={<WhoCanPursueMBA />} />
+          <Route path="/mba/mba-types" element={<MBATypes />} />
+          <Route path="/mba/why-get" element={<WhyGetMBA />} />
+          <Route path="/mba/who-should" element={<WhoShouldConsiderMBA />} />
+          <Route path="/mba/where-to-do" element={<WhereToDoMBA />} />
+          <Route path="/mba/how-to-get" element={<HowToGetIntoMBA />} />
+          <Route path="/mba/right-time" element={<RightTimeForMBA />} />
+          <Route path="/mba/what-is-cat" element={<WhatIsCAT />} />
         </Routes>
       </div>
       <Footer />
