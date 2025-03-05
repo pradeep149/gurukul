@@ -32,3 +32,10 @@
 .animate-fadeInOut {
   animation: fadeInOut 2s forwards;
 }
+
+.clip-white {
+  clip-path: polygon(0 0, 66.7% 0, 60% 100%, 0 100%);
+}
+.clip-black {
+  clip-path: polygon(66.7% 0, 100% 0, 100% 100%, 60% 100%);
+}

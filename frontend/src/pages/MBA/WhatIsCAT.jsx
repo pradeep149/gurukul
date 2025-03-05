@@ -30,7 +30,7 @@ const examFormat = [
   },
   {
     title: "Total Questions",
-    detail: "66 (Divided into 3 sections)",
+    detail: "68 (Divided into 3 sections)",
     icon: <FaListAlt className="text-purple-600 text-3xl" />,
   },
   {

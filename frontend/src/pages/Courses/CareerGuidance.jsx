@@ -23,10 +23,11 @@ const CareerGuidance = () => {
           transition={{ duration: 1 }}
           className="w-3/4 mx-auto text-xl text-gray-800 font-semibold"
         >
-          At Gurukul, we provide expert career guidance, helping you navigate
-          the complex world of career options. From competitive exam preparation
-          like CAT, GATE, GMAT to personalized career counseling, we ensure
-          you're well-equipped to make informed decisions and achieve success.
+          At The Gurukul, we provide expert career guidance, helping you
+          navigate the complex world of career options. From competitive exam
+          preparation like CAT, GATE, GMAT to personalized career counseling, we
+          ensure you're well-equipped to make informed decisions and achieve
+          success.
         </motion.p>
       </div>
 
@@ -37,7 +38,7 @@ const CareerGuidance = () => {
           transition={{ duration: 0.8 }}
           className="text-3xl font-semibold text-center text-gray-800 mb-6"
         >
-          Why Choose Gurukul for Career Guidance?
+          Why Choose The Gurukul for Career Guidance?
         </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
@@ -143,8 +144,8 @@ const CareerGuidance = () => {
                 John Doe
               </p>
               <p className="text-gray-600">
-                "Thanks to Gurukul's career guidance, I was able to achieve my
-                goals and secure a position at a top tech company after GATE.
+                "Thanks to The Gurukul's career guidance, I was able to achieve
+                my goals and secure a position at a top tech company after GATE.
                 Their expertise made all the difference!"
               </p>
             </div>

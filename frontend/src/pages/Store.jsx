@@ -103,7 +103,7 @@ const Store = () => {
     <div className="bg-gradient-to-b from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen py-10 px-4">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-10">
-          Welcome to the Gurukul Store
+          Welcome to The Gurukul Store
         </h1>
         <p className="text-lg text-center text-gray-700 mb-10">
           Explore our range of premium educational resources designed for your

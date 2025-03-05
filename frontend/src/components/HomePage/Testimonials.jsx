@@ -18,7 +18,7 @@ const Testimonials = () => {
           id: 1,
           name: "Praharsha Sai",
           feedback:
-            "I had the privilege of learning from Chaitanya Sir during my CAT preparation, and his guidance played a crucial role in my journey. His structured approach to Quantitative Aptitude and Logical Reasoning made even difficult concepts easier to grasp. Beyond academics, his insights on personal interviews were extremely valuable. What truly sets him apart is his willingness to go the extra mile to support his students. Highly recommend Chaitanya Sir and his institute 'Gurukul' to anyone looking for well-rounded CAT preparation.",
+            "I had the privilege of learning from Chaitanya Sir during my CAT preparation, and his guidance played a crucial role in my journey. His structured approach to Quantitative Aptitude and Logical Reasoning made even difficult concepts easier to grasp. Beyond academics, his insights on personal interviews were extremely valuable. What truly sets him apart is his willingness to go the extra mile to support his students. Highly recommend Chaitanya Sir and his institute 'The Gurukul' to anyone looking for well-rounded CAT preparation.",
           image: assets.testimonial1,
           linkedin: "https://www.linkedin.com/in/praharsha-c-421476129",
         },
@@ -52,7 +52,7 @@ const Testimonials = () => {
         <div className="text-center py-8">
           <Title text1="STUDENT" text2="TESTIMONIALS" />
           <p className="w-3/4 mx-auto text-xl text-black font-semibold italic">
-            See what our students have to say about Gurukul! Their success
+            See what our students have to say about our Gurus! Their success
             stories and feedback motivate us to keep improving.
           </p>
         </div>
@@ -89,7 +89,10 @@ const Testimonials = () => {
                     {item.name}
                   </p>
                   <div className="w-full max-w-6xl">
-                    <p className="text-gray-300 text-xl mb-4 text-justify leading-relaxed">
+                    <p
+                      className="text-gray-300 text-xl mb-4 text-justify leading-relaxed"
+                      style={{ fontFamily: "'Courier New', monospace" }}
+                    >
                       {item.feedback}
                     </p>
                   </div>

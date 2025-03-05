@@ -10,7 +10,7 @@ import { faqs, syllabus, collegeDetails } from "../../content/ipmatData";
 const IPMATPage = () => (
   <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen">
     <Header ExamName="IPMAT" />
-    <VideoSection videoLink="https://www.youtube.com/embed/K1Uc52jzFIQ" />
+    {/* <VideoSection videoLink="https://www.youtube.com/embed/K1Uc52jzFIQ" /> */}
     <FAQSection faqs={faqs} />
     <SyllabusSection syllabus={syllabus} ExamName="IPMAT" />
     <CollegeSection collegeDetails={collegeDetails} ExamName="IPMAT Indore" />

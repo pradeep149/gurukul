@@ -31,6 +31,7 @@ export default {
         typing: "typing 4.5s steps(20) infinite alternate, blink .7s infinite",
       },
       fontFamily: {
+        cinzel: ["Cinzel", "serif"],
         sans: ["Inter", "sans-serif"],
         header: ["Playfair Display", "serif"],
         body: ["Poppins", "sans-serif"],

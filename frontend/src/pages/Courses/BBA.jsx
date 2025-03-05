@@ -102,7 +102,7 @@ const BBAIPMRedesign = () => {
           </div>
         </div>
 
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
             Watch Now
           </h2>
@@ -119,7 +119,7 @@ const BBAIPMRedesign = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-12 text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">

@@ -417,4 +417,43 @@ export const collegeDetails = [
       },
     ],
   },
+  {
+    name: "IIM Amritsar",
+    content: [
+      "The Integrated Program in Management (IPM) at IIM Amritsar is a five-year program leading to an MBA (Master of Business Administration).",
+      "Students have the option to exit the program after three years with a BSQFE (Bachelor of Science in Quantitative Finance and Economics) degree.",
+      "The program focuses on building a strong foundation in quantitative finance and economics in the first three years, followed by advanced management studies in the last two years.",
+    ],
+    faqs: [
+      {
+        question:
+          "Do I need to apply to IIM Amritsar separately after registering for IPMAT?",
+        answer:
+          "Yes, you need to apply to IIM Amritsar separately after registering for IPMAT. The application fee is INR 2000 for General and INR 1000 for SC/ST Category students.",
+      },
+      {
+        question: "What is the Batch strength?",
+        answer: "Not Available",
+      },
+      {
+        question: "What are the eligibility requirements?",
+        answer:
+          "Candidates should not be more than 20 years of age as of 1st July of the admission year. They must have passed Standard XII/HSC or equivalent examination in 2024 or be appearing in 2025 with Mathematics/Applied Mathematics as a compulsory subject. A minimum of 60% in Standard X/SSC and Standard XII/HSC (55% for SC/ST/PwD category) is required.",
+      },
+      {
+        question: "What is the fee structure of the program?",
+        answer: "The fee structure is yet to be disclosed by IIM Amritsar.",
+      },
+      {
+        question:
+          "What is the average salary package after completing the IPM program?",
+        answer: "Not Available",
+      },
+      {
+        question: "What is the admission process?",
+        answer:
+          "The admission process includes IPMAT, followed by a Personal Interview (PI).",
+      },
+    ],
+  },
 ];

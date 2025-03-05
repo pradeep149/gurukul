@@ -10,7 +10,7 @@ import { faqs, syllabus, collegeDetails } from "../../content/ipmatRothakData";
 const IPMATROTHAKPage = () => (
   <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen">
     <Header ExamName="IPMAT Rothak" />
-    <VideoSection videoLink="https://www.youtube.com/embed/jHNNMj5bNQw" />
+    {/* <VideoSection videoLink="https://www.youtube.com/embed/jHNNMj5bNQw" /> */}
     <FAQSection faqs={faqs} />
     <SyllabusSection syllabus={syllabus} ExamName="IPMAT Rothak" />
     <CollegeSection collegeDetails={collegeDetails} ExamName="IPMAT Rothak" />

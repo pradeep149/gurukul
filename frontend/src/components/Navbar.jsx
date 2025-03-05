@@ -8,7 +8,7 @@ import {
   FaTimes,
   FaInstagram,
   FaFacebook,
-  FaTwitter,
+  FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
 
@@ -24,15 +24,21 @@ const Navbar = () => {
           <Link to="/">
             <img
               src={assets.logo}
-              className="w-16 h-16 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+              className="w-20 h-16 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
               alt="Logo"
             />
           </Link>
           <div className="flex flex-col">
-            <span className="text-2xl font-serif font-bold text-blue-900">
+            <span
+              className="text-2xl font-bold text-blue-900"
+              style={{ fontFamily: "'Cinzel', serif" }}
+            >
               The Gurukul
             </span>
-            <span className="text-md font-serif text-yellow-600">
+            <span
+              className="text-lg text-yellow-600"
+              style={{ fontFamily: "'Cinzel', serif" }}
+            >
               Our Passion Your Success
             </span>
           </div>
@@ -111,14 +117,14 @@ const Navbar = () => {
                 <Menu.Item>
                   {({ active }) => (
                     <a
-                      href="https://twitter.com"
+                      href="https://Youtube.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex items-center gap-2 hover:scale-105 transition-transform ${
                         active ? "text-blue-200" : ""
                       }`}
                     >
-                      <FaTwitter /> Twitter
+                      <FaYoutube /> Youtube
                     </a>
                   )}
                 </Menu.Item>
@@ -210,14 +216,14 @@ const Navbar = () => {
                 <Menu.Item>
                   {({ active }) => (
                     <a
-                      href="https://twitter.com"
+                      href="https://Youtube.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex items-center gap-2 hover:scale-105 transition-transform ${
                         active ? "text-blue-200" : ""
                       }`}
                     >
-                      <FaTwitter /> Twitter
+                      <FaYoutube /> Youtube
                     </a>
                   )}
                 </Menu.Item>

@@ -4,9 +4,9 @@ import { FiCheckCircle } from "react-icons/fi";
 import { FaUserTie } from "react-icons/fa";
 
 const TAGLINES = [
-  "Gurukul: where CAT, CLAT, and IPMAT prep meets brains, banter, and brilliance.",
-  "Say goodbye to boring prep – Gurukul makes CAT, CLAT, and IPMAT fun and fabulous.",
-  "Top colleges calling? Gurukul’s the hotline for CAT, CLAT, and IPMAT success.",
+  "The Gurukul: where CAT, CLAT, and IPMAT prep meets brains, banter, and brilliance.",
+  "Say goodbye to boring prep – The Gurukul makes CAT, CLAT, and IPMAT fun and fabulous.",
+  "Top colleges calling? The Gurukul’s the hotline for CAT, CLAT, and IPMAT success.",
 ];
 
 const containerVariant = {
@@ -98,7 +98,7 @@ const AboutUs = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold mb-6 mt-16 text-center gradient-text"
           >
-            About Gurukul
+            About The Gurukul
           </motion.h1>
 
           <div className="relative w-full max-w-3xl h-16 flex items-center justify-center overflow-hidden mx-auto">
@@ -206,10 +206,10 @@ const AboutUs = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold mb-4 text-gray-900">
-              Gurukul - The One-Stop Transformative Education Experience
+              The Gurukul - The One-Stop Transformative Education Experience
             </h2>
             <p className="leading-relaxed text-lg mb-6">
-              At Gurukul, we focus on providing students with a platform to
+              At The Gurukul, we focus on providing students with a platform to
               excel academically and professionally, inspired by Chaitanya and
               Deepak’s vision to transform education. Fueled by their passion
               for empowering students, they envisioned a platform that brings
@@ -217,11 +217,11 @@ const AboutUs = () => {
               achievement. Specializing in exams like CAT, IPMAT, CLAT, AILET,
               SNAP, GMAT, and NMAT, we combine quality teaching with
               personalized mentorship to guide students toward prestigious
-              careers in management and law. At Gurukul, we believe in nurturing
-              not just academic excellence but also the confidence, values, and
-              vision required to lead in today’s dynamic world. Every student’s
-              journey is unique, and we are committed to making it
-              extraordinary.
+              careers in management and law. At The Gurukul, we believe in
+              nurturing not just academic excellence but also the confidence,
+              values, and vision required to lead in today’s dynamic world.
+              Every student’s journey is unique, and we are committed to making
+              it extraordinary.
             </p>
           </motion.div>
         </section>
@@ -262,7 +262,7 @@ const AboutUs = () => {
               },
               {
                 title: "5. Prep Made Fun with Gamified Learning",
-                text: "Transform your exam preparation into an exciting adventure with Gurukul’s gamified learning ecosystem. Say goodbye to mundane study routines and hello to interactive quizzes, progress trackers, and achievement badges that keep you motivated.",
+                text: "Transform your exam preparation into an exciting adventure with The Gurukul’s gamified learning ecosystem. Say goodbye to mundane study routines and hello to interactive quizzes, progress trackers, and achievement badges that keep you motivated.",
               },
               {
                 title: "6. Dedicated Proctor for Every Student",
@@ -270,7 +270,7 @@ const AboutUs = () => {
               },
               {
                 title: "7. Blended Excellence in Teaching",
-                text: "Gurukul offers a unique learning experience where students can attend classes offline or online in real-time. And if a session is missed, access the recorded class later. Flexibility ensures you never miss out on learning.",
+                text: "The Gurukul offers a unique learning experience where students can attend classes offline or online in real-time. And if a session is missed, access the recorded class later. Flexibility ensures you never miss out on learning.",
               },
               {
                 title: "8. Live Foundations Classes to Solid Fundamentals",
@@ -278,11 +278,11 @@ const AboutUs = () => {
               },
               {
                 title: "9. Advanced Sessions for Rankers",
-                text: "Gurukul’s ultimate supremo workshop classes boost your scores and test your mettle. With timed tests and Rank Ready series, get ready to tackle the toughest questions in CAT, IPMAT, and CLAT.",
+                text: "The Gurukul’s ultimate supremo workshop classes boost your scores and test your mettle. With timed tests and Rank Ready series, get ready to tackle the toughest questions in CAT, IPMAT, and CLAT.",
               },
               {
                 title: "10. Curriculum Prepared by Psychologists",
-                text: "Gurukul's pedagogy offers unique mentorship with bespoke study schedules, ensuring students maintain interest and work toward carefully set goals. Parents receive regular updates via our intelligent notification systems, keeping them in the loop with a dedicated proctor.",
+                text: "The Gurukul's pedagogy offers unique mentorship with bespoke study schedules, ensuring students maintain interest and work toward carefully set goals. Parents receive regular updates via our intelligent notification systems, keeping them in the loop with a dedicated proctor.",
               },
             ].map((item, i) => (
               <motion.div
@@ -353,7 +353,7 @@ const AboutUs = () => {
                   Deepak Nemani
                 </h3>
                 <p className="mt-2 leading-relaxed">
-                  Deepak Nemani, the CEO of Gurukul, brings over 5 years of
+                  Deepak Nemani, the CEO of The Gurukul, brings over 5 years of
                   expertise in CAT coaching, supported by an exceptional
                   academic track record, including interview calls from esteemed
                   institutes like IIM Ahmedabad and NMIMS. A former SBI Manager
@@ -383,10 +383,10 @@ const AboutUs = () => {
                   Krishna Chaitanya
                 </h3>
                 <p className="mt-2 leading-relaxed">
-                  Krishna Chaitanya, the COO of Gurukul, is a seasoned mentor
-                  with over a decade of teaching experience and an impressive
-                  record of scoring 99+ percentiles in QA and LRDI multiple
-                  times.
+                  Krishna Chaitanya, the COO of The Gurukul, is a seasoned
+                  mentor with over a decade of teaching experience and an
+                  impressive record of scoring 99+ percentiles in QA and LRDI
+                  multiple times.
                 </p>
                 <p className="mt-2 leading-relaxed">
                   Renowned for his unique approach, Chaitanya simplifies
@@ -402,10 +402,10 @@ const AboutUs = () => {
               whileHover={{ scale: 1.02, rotate: 0.5 }}
             >
               <h3 className="text-2xl font-semibold mb-2 text-gray-900">
-                The Endless Flow of Talent and Experience at Gurukul
+                The Endless Flow of Talent and Experience at The Gurukul
               </h3>
               <p className="leading-relaxed">
-                At Gurukul, students are privileged to have two exceptional
+                At The Gurukul, students are privileged to have two exceptional
                 mentors, Krishna Chaitanya and Deepak Nemani, who are committed
                 to guiding students day and night. With over a decade of
                 combined experience, both mentors take a hands-on approach,
@@ -413,7 +413,7 @@ const AboutUs = () => {
                 preparing them for interviews with top institutions.
               </p>
               <p className="mt-2 leading-relaxed">
-                In addition to the core mentorship team, Gurukul hosts a
+                In addition to the core mentorship team, The Gurukul hosts a
                 rotating panel of visiting faculty—industry experts, alumni from
                 prestigious B-schools and L-schools, and seasoned
                 professionals—who take dedicated sessions. These visiting

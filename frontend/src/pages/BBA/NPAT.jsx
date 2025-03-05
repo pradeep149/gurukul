@@ -10,7 +10,7 @@ import { faqs, syllabus, collegeDetails } from "../../content/npatData";
 const NPATPage = () => (
   <div className="bg-gradient-to-r from-cyan-100 via-indigo-100 to-cyan-100 min-h-screen">
     <Header ExamName="NPAT" />
-    <VideoSection videoLink="https://www.youtube.com/embed/jHNNMj5bNQw" />
+    {/* <VideoSection videoLink="https://www.youtube.com/embed/jHNNMj5bNQw" /> */}
     <FAQSection faqs={faqs} />
     <SyllabusSection syllabus={syllabus} ExamName="NPAT" />
     <CollegeSection collegeDetails={collegeDetails} ExamName="NPAT" />
