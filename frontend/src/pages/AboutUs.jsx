@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiCheckCircle } from "react-icons/fi";
 import { FaUserTie } from "react-icons/fa";
+import { assets } from "../../assets/assets";
 
 const TAGLINES = [
   "The Gurukul: where CAT, CLAT, and IPMAT prep meets brains, banter, and brilliance.",
@@ -33,10 +34,6 @@ const fadeInRight = {
   visible: { opacity: 1, x: 0 },
 };
 
-/*
-  MAIN COMPONENT
-  -----------------------------------
-*/
 const AboutUs = () => {
   const [currentTagline, setCurrentTagline] = useState(0);
 
@@ -92,6 +89,7 @@ const AboutUs = () => {
         initial="hidden"
         animate="visible"
       >
+        {/* -------------- HEADER SECTION -------------- */}
         <section className="relative min-h-[70vh] w-full animated-bg flex flex-col items-center justify-center">
           <motion.h1
             variants={fadeInUp}
@@ -130,6 +128,7 @@ const AboutUs = () => {
           </div>
         </section>
 
+        {/* -------------- VISION/MISSION SECTION -------------- */}
         <section className="relative bg-gradient-to-br from-yellow-50 via-white to-blue-50 pt-12 pb-12">
           <div className="-mt-[70px] mb-8">
             <svg
@@ -183,6 +182,7 @@ const AboutUs = () => {
           </motion.div>
         </section>
 
+        {/* -------------- GURUKUL INFO SECTION -------------- */}
         <section className="relative bg-gradient-to-tr from-pink-50 to-purple-50 pb-12">
           <div>
             <svg
@@ -226,6 +226,7 @@ const AboutUs = () => {
           </motion.div>
         </section>
 
+        {/* -------------- WHY CHOOSE US -------------- */}
         <section
           className="relative bg-white pt-12 pb-12"
           style={{ clipPath: "polygon(0 2%, 100% 0, 100% 100%, 0 100%)" }}
@@ -296,7 +297,6 @@ const AboutUs = () => {
                   scale: 1.03,
                   rotateX: 2,
                   rotateY: 2,
-                  border: "2px solid rgba(147, 51, 234, 0.4)", // gradient-ish border
                 }}
                 variants={fadeInUp}
                 initial="hidden"
@@ -314,6 +314,7 @@ const AboutUs = () => {
           </motion.div>
         </section>
 
+        {/* -------------- MENTORS SECTION -------------- */}
         <section className="relative bg-gradient-to-b from-blue-50 to-white pt-12 pb-24">
           <div>
             <svg
@@ -340,13 +341,18 @@ const AboutUs = () => {
               Masterminds Behind the Maestro
             </h2>
 
-            {/* Mentor Card #1 */}
+            {/* Mentor Card #1: Deepak Nemani */}
             <motion.div
               className="mb-12 md:flex md:items-start md:gap-6 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all"
               whileHover={{ scale: 1.02, rotate: 0.5 }}
             >
-              <div className="mb-4 md:mb-0 flex-shrink-0 w-32 h-32 bg-blue-200 rounded-full flex items-center justify-center">
-                <FaUserTie size={40} className="text-gray-700" />
+              {/* Replace icon with actual image */}
+              <div className="mb-4 md:mb-0 flex-shrink-0 w-32 h-32 rounded-full overflow-hidden">
+                <img
+                  src={assets.guru1}
+                  alt="Deepak Nemani"
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-gray-900">
@@ -370,13 +376,18 @@ const AboutUs = () => {
               </div>
             </motion.div>
 
-            {/* Mentor Card #2 */}
+            {/* Mentor Card #2: Krishna Chaitanya */}
             <motion.div
               className="mb-12 md:flex md:items-start md:gap-6 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all"
               whileHover={{ scale: 1.02, rotate: 0.5 }}
             >
-              <div className="mb-4 md:mb-0 flex-shrink-0 w-32 h-32 bg-blue-200 rounded-full flex items-center justify-center">
-                <FaUserTie size={40} className="text-gray-700" />
+              {/* Replace icon with actual image */}
+              <div className="mb-4 md:mb-0 flex-shrink-0 w-32 h-32 rounded-full overflow-hidden">
+                <img
+                  src={assets.guru2}
+                  alt="Krishna Chaitanya"
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-gray-900">

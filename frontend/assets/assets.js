@@ -22,13 +22,18 @@ import registerbg from "./registerbg.png";
 import scareCrow from "./scareCrow.png";
 import sudoku from "./sudoku.jpg";
 import wordgame from "./wordgame.png";
-import bgtest1 from "./bgtest1.webp";
-import bgtest2 from "./bgtest2.webp";
-import bgtest3 from "./bgtest3.webp";
-import bgtest4 from "./bgtest4.webp";
+import bgtest1 from "./1.jpg";
+import bgtest2 from "./2.jpg";
+import bgtest3 from "./3.jpg";
+import bgtest4 from "./4.jpg";
 import testimonial1 from "./testimonial1.jpg";
 import testimonial2 from "./testimonial2.jpg";
 import testimonial3 from "./testimonial3.jpg";
+import testimonial4 from "./testimonial4.jpeg";
+import testimonial5 from "./testimonial5.jpeg";
+import testimonial6 from "./testimonial6.jpeg";
+import guru1 from "./Deepak.jpg";
+import guru2 from "./Krishna.jpg";
 
 export const assets = {
   bgtest,
@@ -62,4 +67,9 @@ export const assets = {
   testimonial1,
   testimonial2,
   testimonial3,
+  testimonial4,
+  testimonial5,
+  testimonial6,
+  guru1,
+  guru2,
 };

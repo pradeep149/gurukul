@@ -11,11 +11,13 @@ import {
   FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const whatsappGroupLink = "https://chat.whatsapp.com/FsSXwdKH6Z91Udv6MgN8FN";
+  const whatsappGroupLink = "https://wa.me/919014002040";
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-300 via-gray-100 to-gray-200 shadow-lg font-medium">
@@ -89,7 +91,7 @@ const Navbar = () => {
                 <Menu.Item>
                   {({ active }) => (
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/thegurukulmbaprep/#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex items-center gap-2 hover:scale-105 transition-transform ${
@@ -100,7 +102,7 @@ const Navbar = () => {
                     </a>
                   )}
                 </Menu.Item>
-                <Menu.Item>
+                {/* <Menu.Item>
                   {({ active }) => (
                     <a
                       href="https://facebook.com"
@@ -113,11 +115,11 @@ const Navbar = () => {
                       <FaFacebook /> Facebook
                     </a>
                   )}
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Item>
                   {({ active }) => (
                     <a
-                      href="https://Youtube.com"
+                      href="https://www.youtube.com/@Th3-Gurukul"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex items-center gap-2 hover:scale-105 transition-transform ${
@@ -143,7 +145,10 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden sm:flex">
-          <button className="px-8 py-2 text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300">
+          <button
+            className="px-8 py-2 text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
+            onClick={() => navigate("/login")}
+          >
             Login
           </button>
         </div>

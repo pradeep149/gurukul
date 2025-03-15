@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   const [contactDropdownVisible, setContactDropdownVisible] = useState(false);
   const emailRecipient = "support@The Gurukul.com";
-  const whatsappChatLink = "https://wa.me/919876543210";
+  const whatsappChatLink = "https://wa.me/919014002040";
   const currentYear = new Date().getFullYear();
 
   return (
@@ -65,7 +65,7 @@ const Footer = () => {
                     <span>WhatsApp</span>
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/thegurukulmbaprep/#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 text-black hover:text-pink-500"
@@ -73,7 +73,7 @@ const Footer = () => {
                     <FaInstagram className="text-lg" />
                     <span>Instagram</span>
                   </a>
-                  <a
+                  {/* <a
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -81,9 +81,9 @@ const Footer = () => {
                   >
                     <FaFacebook className="text-lg" />
                     <span>Facebook</span>
-                  </a>
+                  </a> */}
                   <a
-                    href="https://youtube.com"
+                    href=" https://www.youtube.com/@Th3-Gurukul"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 text-black hover:text-red-500"
